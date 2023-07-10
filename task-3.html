@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css ">
+   <title>Завдання 2</title>
+</head>
+<body>
+   <script>
+   
+		//Задача 2. Користувач вводить кількість елементів. Створити масив, у якому перша половина заповнена 1-цями, а друга заповнена 7-ками.
+
+		function getArr(length) {
+			let arr = new Array(length).fill(1, 0,Math.ceil(length / 2) ).fill(7, Math.ceil(length / 2) )
+			return arr
+		}
+		let userNum = parseInt(prompt('Введіть кількість елементів'))
+		let arr = getArr(userNum)
+		alert(`Кількість елементів ${userNum}`)
+		alert(arr)
+   </script>
+</body>
+</html>

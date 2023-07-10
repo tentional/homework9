@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css ">
+   <link rel="stylesheet" href="./js/script.js">
+   <title>Завдання 7</title>
+</head>
+<body>
+   <script>
+      
+		//Задача 7. Дано масив цін. Змінити цей масив так, що на ціни товарів, які більші за 1000 грн. дати 30% знижки.
+		
+		function getArr(length) {
+			let arr = []
+			for (let i = 0; i < length; i++) {
+				let element = prompt(`Введніть ціну за ${i+1} елемент`)
+				arr.push(element)
+			}
+			return arr
+		}
+		let priceArr = getArr(parseInt(prompt("Введіть кількість цін")))
+		alert(`Массив до змін ${priceArr}`);
+		priceArr.forEach(
+			(element,index,baseArr) => {
+				if (element > 1000) 
+					baseArr[index] *= 0.7
+			}
+		)
+		alert(`Массив після змін ${priceArr}`);
+   </script>
+</body>
+</html>
